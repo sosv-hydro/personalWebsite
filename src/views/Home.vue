@@ -20,19 +20,27 @@
   <about-me id="about-me"></about-me>
   <resume id="resume"></resume>
   <skills id="skills"></skills> 
+  <interests id="interests"></interests>
+  <contact-me id="contact-me"></contact-me>
   </div>
 </template>
 
 <script>
+require('@/css/custom.css')
+
 import AboutMe from '@/components/AboutMe'
 import Resume from '@/components/Resume'
 import Skills from '@/components/Skills'
+import Interests from '@/components/Interests'
+import ContactMe from '@/components/ContactMe'
 
 export default {
   components: {
     AboutMe,
     Resume, 
-    Skills
+    Skills, 
+    Interests, 
+    ContactMe
   }
 }
 </script>

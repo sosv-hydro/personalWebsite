@@ -35,11 +35,10 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.skill 
-    background: #ebeeee
+#skills
+    background: #ebeeee !important
     padding-top: 50px
-    padding-bottom: 20px
-    height: 630px 
+    padding-bottom: 15px
     width: 100%
 
     h1 
@@ -55,22 +54,151 @@ export default {
 
 .skill-wrapper 
     .columns
-        margin-bottom: 36px
+        margin-bottom: 30px
 
-.portfolio-item 
-    .item-wrap 
-        background: #fff
-        overflow: hidden
+.bars 
+    width: 80%
+    float: left
+    padding: 0
+    margin-left: 70px
+    text-align: left
+
+    .skills 
+        margin-top: 36px
+        list-style: none
+
+    .li 
         position: relative
+        margin-bottom: 60px
+        background: #ccc
+        height: 10px
+        border-radius: 3px
 
-        -webkit-transition: all 0.3s ease-in-out
-        -moz-transition: all 0.3s ease-in-out
-        -o-transition: all 0.3s ease-in-out
-        -ms-transition: all 0.3s ease-in-out
-        transition: all 0.3s ease-in-out
+        em 
+            font: 15px 'Josefin Sans', sans-serif
+            color: #313131
+            text-transform: uppercase
+            letter-spacing: 2px
+            font-weight: normal
+            position: relative
+            top: -36px
 
-        a 
-            display: block
-            cursor: pointer
+.bar-expand 
+    position: absolute
+    left: 0
+    top: 0
+
+    margin: 0
+    padding-right: 24px
+    background: #48bb7a
+    display: inline-block
+    height: 10px
+    line-height: 30px
+    border-radius: 3px 0 0 3px
+
+
+.python-lang 
+    width: 85%
+    -moz-animation: python-lang 2s ease
+    -webkit-animation: python-lang 2s ease
+
+.java-lang 
+    width: 85%
+    -moz-animation: java-lang 2s ease
+    -webkit-animation: java-lang 2s ease
+
+.c-lang 
+    width: 70%
+    -moz-animation: c-lang 2s ease
+    -webkit-animation: c-lang 2s ease
+
+.csharp-lang 
+    width: 65%
+    -moz-animation: csharp-lang 2s ease
+    -webkit-animation: csharp-lang 2s ease
+
+.html-css 
+    width: 60%
+    -moz-animation: html-css 2s ease
+    -webkit-animation: html-css 2s ease
+
+.sql 
+    width: 65%
+    -moz-animation: sql 2s ease
+    -webkit-animation: sql 2s ease
+
+
+@-moz-keyframes python-lang 
+    0%   
+        width: 0px
+    100%
+        width: 85%
+
+@-moz-keyframes java-lang 
+    0%    
+        width: 0px  
+    100% 
+        width: 85%
+
+@-moz-keyframes c-lang 
+    0%   
+        width: 0px
+    100%
+        width: 70%
+
+@-moz-keyframes csharp-lang
+    0%  
+        width: 0px
+    100% 
+        width: 65%
+
+@-moz-keyframes html-css 
+    0%   
+        width: 0px
+    100% 
+        width: 60%
+
+@-moz-keyframes sql 
+    0%   
+        width: 0px
+    100% 
+        width: 65%
+
+
+@-webkit-keyframes python-lang 
+    0%   
+        width: 0px
+    100%
+        width: 85%
+
+@-webkit-keyframes java-lang 
+    0%    
+        width: 0px  
+    100% 
+        width: 85%
+
+@-webkit-keyframes c-lang 
+    0%   
+        width: 0px
+    100%
+        width: 70%
+
+@-webkit-keyframes csharp-lang 
+    0%  
+        width: 0px
+    100% 
+        width: 65%
+
+@-webkit-keyframes html-css 
+    0%  
+        width: 0px
+    100% 
+        width: 60%
+
+@-webkit-keyframes sql 
+    0%  
+        width: 0px
+    100% 
+        width: 65%
 
 </style>

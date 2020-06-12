@@ -6,6 +6,7 @@
 
 p { margin: 0 0 20px 0; }
 
+
 /* default
 --------------------------------------------------------------- */
 .row {
@@ -13,6 +14,7 @@ p { margin: 0 0 20px 0; }
     max-width: 1020px;
     margin: 0 auto;
     box-sizing: border-box;
+    border: none !important;
  }
  /* fixed width for IE8 */
  .ie .row { width: 1000px ; }
@@ -379,12 +381,12 @@ input::-moz-focus-inner {
    100% { width: 65%;  }
 }
 
-#portfolio {
-   background: #ebeeee;
-   padding-top: 90px;
+#interests {
+   background: #2B2B2B;
+   padding-top: 70px;
    padding-bottom: 60px;
 }
-#portfolio h1 {
+#interests h1 {
    font: 15px/24px 'opensans-semibold', sans-serif;
    text-transform: uppercase;
    letter-spacing: 1px;
@@ -393,12 +395,17 @@ input::-moz-focus-inner {
    color: #95A3A3;
 }
 
-/* Portfolio Content */
-#portfolio-wrapper .columns { margin-bottom: 36px; }
-.portfolio-item .item-wrap {
-   background: #fff;
+/* interests Content */
+#interests-wrapper .columns { margin-bottom: 36px; }
+.interests-item .item-wrap {
+   background: #474747;
    overflow: hidden;
    position: relative;
+   height: 150px;
+   text-align: center;
+
+   border-radius: 10%;
+   box-shadow:  1px 1px -1px 3px black;
 
    -webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -406,13 +413,13 @@ input::-moz-focus-inner {
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
-.portfolio-item .item-wrap a {
+.interests-item .item-wrap a {
    display: block;
    cursor: pointer;
 }
 
 /* overlay */
-.portfolio-item .item-wrap .overlay {
+.interests-item .item-wrap .overlay {
    position: absolute;
    left: 0;
    top: 0;
@@ -429,53 +436,55 @@ input::-moz-focus-inner {
 	transition: opacity 0.3s ease-in-out;
 
 }
-.portfolio-item .item-wrap .link-icon {
+.interests-item .item-wrap .link-icon {
    display: block;
    color: #fff;
-   height: 30px;
-   width: 30px;
-   font-size: 18px;
-   line-height: 30px;
-   text-align: center;
 
-   opacity: 0;
+   font-size: 50px;
+   text-align: center;
+   filter:drop-shadow(7px 2px 6px black);
+
+   /*opacity: 0;
 	-moz-opacity: 0;
-	filter:alpha(opacity=0);
+	filter:alpha(opacity=0);*/
 
    -webkit-transition: opacity 0.3s ease-in-out;
 	-moz-transition: opacity 0.3s ease-in-out;
 	-o-transition: opacity 0.3s ease-in-out;
 	transition: opacity 0.3s ease-in-out;
 
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   margin-left: -15px;
-   margin-top: -15px;
+   padding-top: 40px;
+
 }
-.portfolio-item .item-wrap img {
+.interests-item .item-wrap img {
    vertical-align: bottom;
 }
-.portfolio-item .portfolio-item-meta { padding: 18px }
-.portfolio-item .portfolio-item-meta h5 {
+.interests-item .interests-item-meta { 
+   padding: 18px;
+   margin-top: 30px;
+   }
+.interests-item .interests-item-meta h5 {
    font: 14px/21px 'opensans-bold', sans-serif;
    color: #fff;
+   margin: 0;
+   
 }
-.portfolio-item .portfolio-item-meta p {
+.interests-item .interests-item-meta p {
    font: 12px/18px 'opensans-light', sans-serif;
    color: #c6c7c7;
    margin-bottom: 0;
+
 }
 
 /* on hover */
-.portfolio-item:hover .overlay {
+.interests-item:hover .overlay {
 	opacity: 1;
 	-moz-opacity: 1;
 	filter:alpha(opacity=100);
 }
-.portfolio-item:hover .link-icon {
-   opacity: 1;
-	-moz-opacity: 1;
+.interests-item:hover .link-icon {
+   opacity: 0.1;
+	-moz-opacity: 0.1;
 	filter:alpha(opacity=100);
 }
 
@@ -545,3 +554,244 @@ input::-moz-focus-inner {
    opacity: 0;
 }
 
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+
+/*  7. Forms  --------------------------------------------------------- */
+
+form { margin-bottom: 24px; }
+fieldset { margin-bottom: 24px; }
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+   display: block;
+   padding: 18px 15px;
+   margin: 0 0 24px 0;
+   border: 0;
+   outline: none;
+   vertical-align: middle;
+   min-width: 225px;
+	max-width: 100%;
+   font-size: 15px;
+   line-height: 24px;
+	color: #647373;
+	background: #D3D9D9;
+
+}
+
+/* select { padding: 0;
+   width: 220px;
+   } */
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+   color: #B3B7BC;
+	background-color: #3d4145;
+}
+
+textarea { min-height: 220px; }
+
+label,
+legend {
+   font: 16px/24px 'opensans-bold', sans-serif;
+	margin: 12px 0;
+   color: #3d4145;
+   display: block;
+}
+label span,
+legend span {
+	color: #8B9798;
+   font: 14px/24px 'opensans-regular', sans-serif;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    font-size: 15px;
+    color: #737373;
+}
+
+input[type="checkbox"] { display: inline; }
+
+/* ------------------------------------------------------------------ */
+/* h. contact-me-me Section
+/* ------------------------------------------------------------------ */
+
+#contact-me {
+   background: #191919;
+   padding-top: 96px;
+   padding-bottom: 102px;
+   color: #636363;
+   border: 0
+}
+#contact-me .section-head { margin-bottom: 42px; }
+
+#contact-me a, #contact-me a:visited  { color: #11ABB0; }
+#contact-me a:hover, #contact-me a:focus { color: #fff; }
+
+#contact-me h1 {
+   font: 18px/24px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 3px;
+   color: #EBEEEE;
+   margin-bottom: 6px;
+}
+#contact-me h1 span { display: none; }
+#contact-me h1:before {
+   font-family: 'FontAwesome';
+   content: "\f0e0";
+	padding-right: 10px;
+	font-size: 72px;
+   line-height: 72px;
+   text-align: left;
+   float: left;
+   color: #ebeeee;
+}
+
+#contact-me h4 {
+   font: 16px/24px 'opensans-bold', sans-serif;
+   color: #EBEEEE;
+   margin-bottom: 6px;
+}
+#contact-me p.lead {
+   font: 18px/36px 'opensans-light', sans-serif;
+   padding-right: 3%;
+}
+#contact-me .header-col { padding-top: 6px; }
+
+
+/* contact-me form */
+#contact-me form { margin-bottom: 30px; border: 0px;}
+#contact-me label {
+   font: 15px/24px 'opensans-bold', sans-serif;
+   margin: 12px 0;
+   color: #EBEEEE;
+	display: inline-block;
+	float: left;
+   width: 26%;
+}
+#contact-me input,
+#contact-me textarea,
+#contact-me select {
+   padding: 18px 20px;
+	color: #eee;
+	background: #373233;
+	margin-bottom: 42px;
+	border: 0;
+	outline: none;
+   font-size: 15px;
+   line-height: 24px;
+   width: 65%;
+}
+#contact-me input:focus,
+#contact-me textarea:focus,
+#contact-me select:focus {
+	color: #fff;
+	background-color: #11ABB0;
+}
+#contact-me button.submit {
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color:#fff;
+   background: #0D0D0D;
+	border: none;
+   cursor: pointer;
+   height: auto;
+   display: inline-block;
+	border-radius: 3px;
+   margin-left: 26%;
+}
+#contact-me button.submit:hover {
+	color: #0D0D0D;
+	background: #fff;
+}
+#contact-me span.required {
+	color: #11ABB0;
+	font-size: 13px;
+}
+#message-warning, #message-success {
+   display: none;
+	background: #0F0F0F;
+	padding: 24px 24px;
+	margin-bottom: 36px;
+   width: 65%;
+   margin-left: 26%;
+}
+#message-warning { color: #D72828; }
+#message-success { color: #11ABB0; }
+
+#message-warning i,
+#message-success i {
+   margin-right: 10px;
+}
+
+
+/*  7. Forms  --------------------------------------------------------- */
+
+form { margin-bottom: 24px; }
+fieldset { margin-bottom: 24px; }
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+   display: block;
+   padding: 18px 15px;
+   margin: 0 0 24px 0;
+   border: 0;
+   outline: none;
+   vertical-align: middle;
+   min-width: 225px;
+	max-width: 100%;
+   font-size: 15px;
+   line-height: 24px;
+	color: #647373;
+	background: #D3D9D9;
+
+}
+
+/* select { padding: 0;
+   width: 220px;
+   } */
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+   color: #B3B7BC;
+	background-color: #3d4145;
+}
+
+textarea { min-height: 220px; }
+
+label,
+legend {
+   font: 16px/24px 'opensans-bold', sans-serif;
+	margin: 12px 0;
+   color: #3d4145;
+   display: block;
+}
+label span,
+legend span {
+	color: #8B9798;
+   font: 14px/24px 'opensans-regular', sans-serif;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    font-size: 15px;
+    color: #737373;
+}
+
+input[type="checkbox"] { display: inline; }

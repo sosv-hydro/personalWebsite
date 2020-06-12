@@ -57,8 +57,6 @@
 </template>
 
 <script>
-
-require('@/css/custom.css')
 //require('@/css/default.css')
 
 export default {
